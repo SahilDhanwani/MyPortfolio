@@ -8,13 +8,93 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <link rel='stylesheet' href='bootstrap.min.css'>
-    <script defer src="bootstrap.bundle.min.js"></script>
-
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-sm bg-dark fixed-top" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-3" href="/index.html">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <script src="main.js"></script>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="nav nav-pills my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#achievements">Acchievements</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+
+    
+
+
+    <section id="about" class="section vh-100 mt-8">
+        <div class="navbar-spacer" style="height: 72px;"></div>
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Your about me content goes here.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section vh-100 mt-8">
+        <div class="navbar-spacer" style="height: 72px;"></div>
+        <div class="container">
+            <h2>Projects</h2>
+            <p>Your projects content goes here.</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section vh-100">
+        <div class="navbar-spacer" style="height: 72px;"></div>
+        <div class="container">
+            <h2>Experience</h2>
+            <p>Your experience content goes here.</p>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section vh-100">
+        <div class="navbar-spacer" style="height: 72px;"></div>
+        <div class="container">
+            <h2>Achievements</h2>
+            <p>Your achievements content goes here.</p>
+        </div>
+    </section>
+
+
+    <script>
+        // Smooth scrolling for navbar links
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="main.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    
 </body>
 
 </html>
