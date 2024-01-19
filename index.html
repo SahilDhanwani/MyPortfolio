@@ -6,8 +6,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Portfolio</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <link rel='stylesheet' href='bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 
 <body>
@@ -79,23 +79,18 @@
     </section>
 
     <!-- Contact Me Section -->
-    <section id="contact" class="section">
-        <div class="row vh-100 text-center align-items-center">
-            <!-- <div class="navbar-spacer" style="height: 72px;"></div> -->
-            <h2>Contact Me</h2>
-            <div class="col-auto border border-primary border-2 align-self-center">
-                <div class="row justify-content-evenly">
-                    <div class="col-auto mb-3">
-                        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-                    </div>
-                    <div class="col-auto mb-3">
-                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-                    </div>
-                </div>
+    <section id="contact" class="text-center border border-2 border-primary">
+        <div class="navbar-spacer" style="height: 72px;"></div>
+        <h2>Contact Me</h2>
+        <form class="contact_page">
+            <div class="border border-primary border-2">
+                <input type="text" name="first_name" class="form-control mb-3" placeholder="First name">
+                <input type="text" name="last_name" class="form-control mb-3" placeholder="Last name">
+                <input type="email" name="email" class="form-control mb-3" placeholder="E-mail">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                    placeholder="Express your thoughts"></textarea>
             </div>
-        </div>
-
-
+        </form>
     </section>
 
     <script src="main.js"></script>
