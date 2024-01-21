@@ -1,12 +1,22 @@
+:root {
+    --black: rgb(25, 29, 50);
+    --white: rgb(252, 239, 249);
+    --blue: rgb(33, 118, 255);
+    --red: rgb(232, 72, 85);
+    --yellow: rgb(255, 253, 130);
+}
+
 body {
     background-color: rgb(25, 29, 50);
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
 }
 
 #backgrond {
     position: fixed;
     top: -450px;
     left: 0px;
-    width: 100%;   
+    width: 100%;
     background: none;
     display: flex;
     flex-direction: column;
@@ -29,16 +39,18 @@ body {
     0% {
         transform: rotate(-30deg) translateX(-8%);
     }
+
     50% {
         transform: rotate(-30deg) translateX(-35%);
     }
+
     100% {
         transform: rotate(-30deg) translateX(-8%);
     }
 }
 
 i {
-    color: rgb(33, 118, 255);
+    color: rgb(69, 68, 68);
     margin: 0;
     padding: 0 5px;
     transition: 1s;
@@ -46,8 +58,27 @@ i {
 
 i:hover {
     transition: 0s;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     text-shadow: 20px 20px 120px rgb(37, 4, 250);
+}
+
+#navbar {
+    background-color: rgb(25, 29, 50);
+}
+
+#about {
+    text-align: center;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+}
+
+#sahil {
+    width: max-content;
+    z-index: 1;
+    margin-bottom: 0;
 }
 
 .contact_page {
