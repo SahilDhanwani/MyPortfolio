@@ -1,3 +1,55 @@
+body {
+    background-color: rgb(25, 29, 50);
+}
+
+#backgrond {
+    position: fixed;
+    top: -450px;
+    left: 0px;
+    width: 100%;   
+    background: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.row1 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    white-space: nowrap;
+    font-size: 50px;
+    transform: rotate(-30deg) translateX(-8%);
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(-30deg) translateX(-8%);
+    }
+    50% {
+        transform: rotate(-30deg) translateX(-35%);
+    }
+    100% {
+        transform: rotate(-30deg) translateX(-8%);
+    }
+}
+
+i {
+    color: rgb(33, 118, 255);
+    margin: 0;
+    padding: 0 5px;
+    transition: 1s;
+}
+
+i:hover {
+    transition: 0s;
+    color: rgb(255, 255, 255);
+    text-shadow: 20px 20px 120px rgb(37, 4, 250);
+}
+
 .contact_page {
     display: flex;
     flex-direction: column;
