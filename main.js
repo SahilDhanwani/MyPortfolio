@@ -1,3 +1,18 @@
+var typed = new Typed(".role", {
+    strings: [
+        'Front End Developer',
+        'Back End Developer',
+        'App Developer',
+        'Full Stack Developer',
+        'Web Developer',
+        'Software Developer',
+    ],
+    typeSpeed: 100,
+    backSpeed: 50,
+    backDelay: 2000,
+    loop: true, 
+});
+
 function validateForm() {
     var first_name = document.contact.first_name.value;
     var last_name = document.contact.last_name.value;
