@@ -167,7 +167,7 @@ body {
     z-index: 2;
 }
 
-#about_front_2 img {
+#profile_image, #profile_gif {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -176,11 +176,18 @@ body {
     border-left: 5px solid var(--red);
     border-right: 5px solid var(--red);
     box-shadow: 0 0 50px var(--white);
-    /* box-shadow: 
-    0 -20px 20px var(--yellow),   
-    20px 0 20px var(--red),    
-    0 20px 20px var(--yellow), 
-    -20px 0 20px var(--red);    */
+}
+#profile_gif {
+    display: none;
+}
+#about_front_2:hover #profile_image {
+    display: none;
+}
+
+#about_front_2:hover #profile_gif {
+    display: block;
+}
+
 
 @media only screen and (max-width: 800px) {
     #about_back {
