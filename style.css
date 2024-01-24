@@ -36,16 +36,18 @@ body {
 .animation_1 {
     transform: rotate(-30deg) translateX(-7%);
     animation: animate1 120s linear infinite;
-    /* animation-delay: 20s; */ 
+    /* animation-delay: 20s; */
 }
 
 @keyframes animate1 {
     0% {
         transform: rotate(-30deg) translateX(-7%);
     }
+
     50% {
         transform: rotate(-30deg) translateX(-180%);
     }
+
     100% {
         transform: rotate(-30deg) translateX(-7%);
     }
@@ -54,16 +56,18 @@ body {
 .animation_2 {
     transform: rotate(-30deg) translateX(-7%);
     animation: animate2 100s linear infinite;
-    /* animation-delay: 20s; */ 
+    /* animation-delay: 20s; */
 }
 
 @keyframes animate2 {
     0% {
         transform: rotate(-30deg) translateX(-7%);
     }
+
     50% {
         transform: rotate(-30deg) translateX(-180%);
     }
+
     100% {
         transform: rotate(-30deg) translateX(-7%);
     }
@@ -72,16 +76,18 @@ body {
 .animation_3 {
     transform: rotate(-30deg) translateX(-180%);
     animation: animate3 100s linear infinite;
-    /* animation-delay: 20s; */ 
+    /* animation-delay: 20s; */
 }
 
 @keyframes animate3 {
     0% {
         transform: rotate(-30deg) translateX(-180%);
     }
+
     50% {
         transform: rotate(-30deg) translateX(-7%);
     }
+
     100% {
         transform: rotate(-30deg) translateX(-180%);
     }
@@ -90,16 +96,18 @@ body {
 .animation_4 {
     transform: rotate(-30deg) translateX(-180%);
     animation: animate4 120s linear infinite;
-    /* animation-delay: 20s; */ 
+    /* animation-delay: 20s; */
 }
 
 @keyframes animate4 {
     0% {
         transform: rotate(-30deg) translateX(-180%);
     }
+
     50% {
         transform: rotate(-30deg) translateX(-7%);
     }
+
     100% {
         transform: rotate(-30deg) translateX(-180%);
     }
@@ -115,26 +123,61 @@ i {
 i:hover {
     transition: 0s;
     color: var(--white);
-    text-shadow: 20px 20px 120px rgb(37, 4, 250);
+    text-shadow: 20px 20px 120px var(--white);
 }
 
 #navbar {
-    background-color: rgb(25, 29, 50);
+    background-color: var(--black);
 }
 
-#about {
-    text-align: center;
-    color: var(--white);
+#about_back {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
     z-index: -1;
+    align-items: center;
+    min-height: calc(100vh - 72px);
+    color: var(--white);
 }
 
-#sahil {
-    width: max-content;
+#about_front_1 {
     z-index: 1;
-    margin-bottom: 0;
+    width: 40%;
+}
+
+#about_front_1 a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 10%; */
+    /* height: 10%; */
+    background: transparent;
+    border: 2px solid var(--yellow);
+    border-radius: 50%;
+    z-index: 1;
+    /* width: 40%; */
+}
+
+#about_front_2,
+img {
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    box-shadow: 0 0 20px var(--white);
+}
+
+@media only screen and (max-width: 800px) {
+    #about_back {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about_front_1 {
+        width: 90%;
+    }
+
+
 }
 
 .contact_page {
