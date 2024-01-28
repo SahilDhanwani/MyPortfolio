@@ -5027,7 +5027,7 @@ fieldset:disabled .btn {
   background-clip: border-box;
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
-  margin: 10px;
+  margin: 0 40px 80px 40px;
 }
 
 .card>hr {
