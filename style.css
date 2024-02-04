@@ -203,6 +203,38 @@ body {
     margin: 20px 20px;
 }
 
+#experience_back {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    z-index: -1;
+    color: var(--yellow);
+}
+
+#experience_back h1 {
+    z-index: 1;
+    margin-left: 30px;
+    width: 100%;
+    margin: 20px 20px;
+}
+
+#contact_back {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    z-index: -1;
+    color: var(--yellow);
+}
+
+#contact_back h2 {
+    z-index: 1;
+    margin-left: 30px;
+    width: 100%;
+    margin: 20px 20px;
+}
+
 @media only screen and (max-width: 800px) {
     #about_back {
         flex-direction: column;
@@ -222,11 +254,12 @@ body {
 .contact_page {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 72px - (1.325rem + .9vw + 20px));
-    border: 2px solid rgb(239, 5, 5);
+    min-height: calc(100vh - 72px - (1.325rem + .9vw));
     justify-content: center;
     align-items: center;
     align-content: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 .project_page {
