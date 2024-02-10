@@ -12,6 +12,13 @@ body {
     padding: 0 0 0 0;
 }
 
+h2 {
+    z-index: 1;
+    margin-left: 30px;
+    width: 100%;
+    margin: 20px 20px;
+}
+
 #backgrond {
     position: fixed;
     top: -450px;
@@ -166,7 +173,8 @@ body {
     z-index: 2;
 }
 
-#profile_image, #profile_gif {
+#profile_image,
+#profile_gif {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -176,15 +184,26 @@ body {
     border-right: 5px solid var(--red);
     box-shadow: 0 0 50px var(--white);
 }
+
 #profile_gif {
     display: none;
 }
+
 #about_front_2:hover #profile_image {
     display: none;
 }
 
 #about_front_2:hover #profile_gif {
     display: block;
+}
+
+#skills_back {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    z-index: -1;
+    color: var(--yellow);
 }
 
 #project_back {
@@ -196,12 +215,7 @@ body {
     color: var(--yellow);
 }
 
-#project_back h2 {
-    z-index: 1;
-    margin-left: 30px;
-    width: 100%;
-    margin: 20px 20px;
-}
+
 
 #experience_back {
     display: flex;
