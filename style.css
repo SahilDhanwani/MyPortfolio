@@ -268,8 +268,9 @@ h2 {
 .contact_page {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 72px - (1.325rem + .9vw));
+    /* min-height: calc(100vh - 72px - (1.325rem + .9vw)); */
     justify-content: center;
+    padding: auto;
     align-items: center;
     align-content: center;
     margin-bottom: 0px;
