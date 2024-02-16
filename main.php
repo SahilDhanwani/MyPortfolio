@@ -11,11 +11,8 @@ $xsd = 'data.xsd'; // Path to your XSD file
 $isValid = $doc->schemaValidate($xsd);
 
 if ($isValid) {
-    // XML is valid according to the XSD schema
-    // Process the data or save it to a database
-    echo "XML data is valid!";
+    echo "XML data is valid in PHP";
 } else {
-    // XML is not valid
     echo "XML data is not valid!";
 }
 ?>

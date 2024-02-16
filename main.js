@@ -36,15 +36,12 @@ function submitForm(event) {
     xmlData += '<thoughts>' + thoughts + '</thoughts>';
     xmlData += '</contact>';
 
-    console.log(xmlData);
     // Send XML data to the server
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "main.php", true);
     xhr.setRequestHeader("Content-Type", "text/xml");
     xhr.onreadystatechange = function () {
 
-        console.log("Hello");
-        console.log("World");
         if (xhr.readyState === 4 && xhr.status === 200) {
             // Handle the response from the server
             console.log(xhr.responseText);
@@ -57,9 +54,9 @@ function submitForm(event) {
 
 
 function validateForm() {
-    var first_name = document.contact.first_name.value;
-    var last_name = document.contact.last_name.value;
-    var email = document.contact.email.value;
+    var first_name = document.contact.first_name;
+    var last_name = document.contact.last_name;
+    var email = document.contact.email;
 
     if (first_name_validation(first_name)) {
         if (last_name_validation(last_name)) {
@@ -72,9 +69,9 @@ function validateForm() {
 }
 
 function first_name_validation(first_name) {
-    var first_name_len = first_name.length;
+    var first_name_len = first_name.value.length;
     var letters = /^[A-Za-z]+$/;
-    if (first_name_len == 0 || !first_name.match(letters)) {
+    if (first_name_len == 0 || !first_name.value.match(letters)) {
         alert("First name should not be empty & shold have only letters");
         first_name.focus();
         return false;
@@ -83,9 +80,9 @@ function first_name_validation(first_name) {
 }
 
 function last_name_validation(last_name) {
-    var last_name_len = last_name.length;
+    var last_name_len = last_name.value.length;
     var letters = /^[A-Za-z]+$/;
-    if (last_name_len == 0 || !last_name.match(letters)) {
+    if (last_name_len == 0 || !last_name.value.match(letters)) {
         alert("Last name should not be empty & shold have only letters");
         last_name.focus();
         return false;
@@ -94,7 +91,7 @@ function last_name_validation(last_name) {
 }
 
 function email_validation(email) {
-    var email_len = email.length;
+    var email_len = email.value.length;
     if (email_len == 0) {
         alert("Email should not be empty");
         email.focus();
