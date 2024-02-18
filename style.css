@@ -259,7 +259,7 @@ h2 {
     font-size: 25px;
     line-height: 30px;
     margin-bottom: 10px;
-    color: var(--red);
+    color: var(--blue);
 }
 
 .timeline-content p {
@@ -269,11 +269,11 @@ h2 {
 }
 
 .timeline-content .date {
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 300;
     margin-bottom: 10px;
     letter-spacing: 2px;
-    color: var(--blue);
+    color: var(--yellow);
 }
 
 #experience_back {
@@ -281,15 +281,20 @@ h2 {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     z-index: -1;
     color: var(--yellow);
 }
 
-#experience_back h1 {
-    z-index: 1;
-    margin-left: 30px;
-    width: 100%;
-    margin: 20px 20px;
+#experience_item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    /* z-index: 1; */
+    color: var(--yellow);
+    /* margin: 20px auto; */
+    /* background-color: yellowgreen; */
 }
 
 #contact_back {
