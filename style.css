@@ -199,30 +199,13 @@ h2 {
     display: block;
 }
 
-#skills_back {
+#back_side {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     z-index: -1;
-    color: var(--yellow);
-}
-
-#project_back {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    z-index: -1;
-    color: var(--yellow);
-}
-
-#education_back {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    z-index: -1;
-    justify-content: center;
     color: var(--yellow);
 }
 
@@ -276,34 +259,37 @@ h2 {
     color: var(--yellow);
 }
 
-#experience_back {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    z-index: -1;
-    color: var(--yellow);
+#carouselExampleIndicators {
+    width: 75%;
 }
 
 #experience_item {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
-    /* z-index: 1; */
-    color: var(--yellow);
-    /* margin: 20px auto; */
-    /* background-color: yellowgreen; */
+    justify-content: flex-start;
+    color: var(--white);
+    background-color: var(--dark-blue);
+    margin: 10px 0;
 }
 
-#contact_back {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    z-index: -1;
-    color: var(--yellow);
+#experience_item_left {
+    width: 50%;
+    /* text-align: center; */
+    padding: 20px;
+}
+
+#experience_item_left h3 {
+    color: var(--red);
+}
+
+#experience_item_right {
+    width: 50%;
+    padding: 20px;
+}
+
+#experience_item_right h4 {
+    color: var(--blue);
 }
 
 #contact_back h2 {
@@ -326,6 +312,16 @@ h2 {
     #social_links {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #experience_item_left,
+    #experience_item_right {
+        width: 100%;
+    }
+
+    #carouselExampleIndicators {
+        width: 90%;
+
     }
 }
 
