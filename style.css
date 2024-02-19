@@ -273,23 +273,46 @@ h2 {
     margin: 10px 0;
 }
 
-#experience_item_left {
+#experience_item_child {
     width: 50%;
-    /* text-align: center; */
     padding: 20px;
 }
 
-#experience_item_left h3 {
+#experience_item_child h3 {
     color: var(--red);
 }
 
-#experience_item_right {
-    width: 50%;
-    padding: 20px;
+#experience_item_child h4 {
+    color: var(--blue);
 }
 
-#experience_item_right h4 {
+#achievements_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    margin: 20px 0;
+    z-index: 1;
+}
+
+#achievements_list ul {
+    list-style: none;
+}
+
+#achievements_list ul li a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+#achievements_list ul li a:hover {
     color: var(--blue);
+}
+
+#achievements_item {
+    width: 50vw;
+    text-align: left;
 }
 
 #contact_back h2 {
@@ -314,14 +337,22 @@ h2 {
         margin-right: auto;
     }
 
-    #experience_item_left,
-    #experience_item_right {
+    #experience_item_child {
         width: 100%;
     }
 
     #carouselExampleIndicators {
         width: 90%;
 
+    }
+
+    #achievements_list {
+        flex-wrap: wrap;
+    }
+
+    #achievements_item {
+        width: 80vw;
+        text-align: left;
     }
 }
 
