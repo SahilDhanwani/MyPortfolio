@@ -1,18 +1,29 @@
 <?php
-// Read the XML data sent from the form
-$xmlData = file_get_contents('php://input');
+$servername = "localhost";
+$username = "root";
+$password = "1234";
+$database = "portfolio";
 
-// Load the XML data into a DOMDocument object
-$doc = new DOMDocument();
-$doc->loadXML($xmlData);
+$firstname = $_POST['first_name'];
+$lastname = $_POST['last_name'];
+$email = $_POST['email'];
+$thoughts = $_POST['thoughts'];
 
-// Load the XSD schema
-$xsd = 'data.xsd'; // Path to your XSD file
-$isValid = $doc->schemaValidate($xsd);
+$conn = new mysqli($servername, $username, $password, $database);
 
-if ($isValid) {
-    echo "XML data is valid in PHP";
-} else {
-    echo "XML data is not valid!";
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
+$sql = "INSERT INTO contactme (FirstName, LastName, Email, Thoughts) VALUES (?, ?, ?, ?)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ssss", $firstname, $lastname, $email, $thoughts);
+
+if ($stmt->execute()) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
 ?>
